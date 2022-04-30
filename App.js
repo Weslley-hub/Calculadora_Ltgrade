@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Calcular from './pastes/calculator';
+import { StyleSheet, StatusBar} from 'react-native';
+
+import { Grid } from "react-native-easy-grid";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Grid style={estilos.conteiner} > 
+    <StatusBar/>
+    <Calcular/>
+    </Grid>
+    
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const estilos = StyleSheet.create({
+  conteiner: {
+     padding:1,
+     maxHeight: '100%',
+     maxWidth: '100%',
+     justifyContent: 'center',
+     alignItems: 'flex-end',
   },
 });
